@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSB Steganography Web GUI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="window"> 
+    <div class="content">
+      <!-- Select Image Button -->
+      <label class="btn" for="fileInput">Select Input Image</label>
+      <input type="file" id="fileInput" accept="image/png, image/bmp, image/webp, image/jpeg, image/jpg" />
+
+      <!-- Secret Text Input -->
+      <input type="text" id="secretInput" class="text-input" placeholder="Enter Text... " />
+
+      <!-- Encode & Decode Buttons -->
+      <div class="btn-row">
+        <button class="btn" id="embedBtn">Embed & Save</button>
+        <button class="btn" id="extractBtn">Extract Text</button>
+      </div>
+
+      <!-- Output Result -->
+      <div class="output-box" id="outputBox">Output Box</div>
+    </div>
+  </div>
+
+  <!-- Hidden Canvas for Bitwise Pixel Manipulation -->
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
